@@ -16,7 +16,7 @@ const AvatarBox = ({ mobile = false }: AvatarBoxProps) => {
 
   return (
     <div
-      className={`flex items-center justify-start space-x-3 ${!mobile ? 'sm:mb-8' : ''} px-2`}
+      className={`flex items-center justify-start space-x-3 ${!mobile ? 'sm:mb-8' : ''} px-2 cursor-pointer`}
       onClick={() => returnToHome()}
     >
       <Avatar>
@@ -32,14 +32,24 @@ const AvatarBox = ({ mobile = false }: AvatarBoxProps) => {
       <div
         className="text-sm flex flex-col"
       >
-        <span className="text-black md:text-lg">
+        <span className="text-black dark:text-white font-medium md:text-lg">
           {siteConfig.name}
         </span>
-        <span>
+        <span className="text-neutral-600 dark:text-neutral-400">
           <Typewriter
-            words={[siteConfig.role]}
+            words={[
+              "AI Engineer",
+              "Gen AI Engineer",
+              "RAG Engineer",
+              "LLM Engineer",
+              "Applied AI",
+              "AI Architect",
+            ]}
             loop
             cursor
+            typeSpeed={70}
+            deleteSpeed={40}
+            delaySpeed={1500}
           />
         </span>
       </div>

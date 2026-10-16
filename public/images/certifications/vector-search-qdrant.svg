@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f1224"/>
+      <stop offset="100%" stop-color="#2d1537"/>
+    </linearGradient>
+    <linearGradient id="accent4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <pattern id="grid4" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <rect width="800" height="450" fill="url(#bg4)"/>
+  <rect width="800" height="450" fill="url(#grid4)"/>
+  
+  <circle cx="680" cy="90" r="140" fill="#f43f5e" opacity="0.1" filter="blur(40px)"/>
+  <circle cx="100" cy="360" r="120" fill="#ec4899" opacity="0.08" filter="blur(40px)"/>
+
+  <!-- Border Frame -->
+  <rect x="24" y="24" width="752" height="402" rx="16" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+  <!-- Top Badge -->
+  <rect x="60" y="60" width="170" height="30" rx="15" fill="rgba(244,63,94,0.12)" stroke="rgba(244,63,94,0.3)" stroke-width="1"/>
+  <circle cx="76" cy="75" r="5" fill="#f43f5e"/>
+  <text x="90" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#f43f5e" letter-spacing="1.5">QDRANT ACADEMY</text>
+
+  <!-- Seal / Icon -->
+  <g transform="translate(640, 60)">
+    <circle cx="40" cy="40" r="36" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+    <path d="M40 22 L45 34 L58 35 L48 44 L51 57 L40 50 L29 57 L32 44 L22 35 L35 34 Z" fill="url(#accent4)"/>
+  </g>
+
+  <!-- Certificate Title -->
+  <text x="60" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+    Vector Search &amp;
+  </text>
+  <text x="60" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="800" fill="url(#accent4)" letter-spacing="-0.5">
+    Production RAG Systems
+  </text>
+
+  <!-- Subtitle -->
+  <text x="60" y="280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400" fill="#fbcfe8">
+    HNSW Indexing, Dense Retrieval, Payload Filtering &amp; Hybrid Search
+  </text>
+
+  <!-- Bottom Details -->
+  <line x1="60" y1="330" x2="740" y2="330" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  
+  <text x="60" y="375" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#f472b6" letter-spacing="1">ISSUED BY</text>
+  <text x="60" y="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#fdf2f8">Qdrant Vector Database</text>
+
+  <text x="450" y="375" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#f472b6" letter-spacing="1">STATUS</text>
+  <text x="450" y="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#f43f5e">Verified Credential</text>
+</svg>

@@ -9,38 +9,41 @@ export const FollowerPointerCard = ({
   children,
   className,
   title,
+  badgeColor,
+  badgeClassName,
 }: {
   children: React.ReactNode;
   className?: string;
   title?: string | React.ReactNode;
+  badgeColor?: string;
+  badgeClassName?: string;
 }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const ref = React.useRef<HTMLDivElement>(null);
-  const [rect, setRect] = useState<DOMRect | null>(null);
-  const [isInside, setIsInside] = useState<boolean>(false); // Add this line
-
-  useEffect(() => {
-    if (ref.current) {
-      setRect(ref.current.getBoundingClientRect());
-    }
-  }, []);
+  const [isInside, setIsInside] = useState<boolean>(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (rect) {
-      const scrollX = window.scrollX;
-      const scrollY = window.scrollY;
-      x.set(e.clientX - rect.left + scrollX);
-      y.set(e.clientY - rect.top + scrollY);
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      x.set(e.clientX - rect.left);
+      y.set(e.clientY - rect.top);
     }
   };
+
   const handleMouseLeave = () => {
     setIsInside(false);
   };
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      x.set(e.clientX - rect.left);
+      y.set(e.clientY - rect.top);
+    }
     setIsInside(true);
   };
+
   return (
     <div
       onMouseLeave={handleMouseLeave}
@@ -53,7 +56,15 @@ export const FollowerPointerCard = ({
       className={cn("relative", className)}
     >
       <AnimatePresence>
-        {isInside && <FollowPointer x={x} y={y} title={title} />}
+        {isInside && (
+          <FollowPointer
+            x={x}
+            y={y}
+            title={title}
+            badgeColor={badgeColor}
+            badgeClassName={badgeClassName}
+          />
+        )}
       </AnimatePresence>
       {children}
     </div>
@@ -87,10 +98,14 @@ export const FollowPointer = ({
   x,
   y,
   title,
+  badgeColor,
+  badgeClassName,
 }: {
   x: any;
   y: any;
   title?: string | React.ReactNode;
+  badgeColor?: string;
+  badgeClassName?: string;
 }) => {
   const colors = [
     "#ff6b6b", // vibrant red
@@ -101,14 +116,18 @@ export const FollowPointer = ({
     "#f472b6", // hot pink
     "#fb923c", // vibrant orange
   ];
+
+  const [fallbackColor] = useState(
+    () => colors[Math.floor(Math.random() * colors.length)]
+  );
+  const bgColor = badgeColor || fallbackColor;
   
   return (
     <motion.div
-      className="absolute z-50 h-4 w-4 rounded-full"
+      className="absolute z-50 h-4 w-4 rounded-full pointer-events-none"
       style={{
         top: y,
         left: x,
-        pointerEvents: "none",
       }}
       initial={{
         scale: 1,
@@ -128,7 +147,7 @@ export const FollowPointer = ({
         fill="currentColor"
         strokeWidth="1"
         viewBox="0 0 16 16"
-        className="h-6 w-6 -translate-x-[12px] -translate-y-[10px] -rotate-[70deg] transform stroke-sky-600 text-sky-500"
+        className="h-6 w-6 -translate-x-[12px] -translate-y-[10px] -rotate-[70deg] transform stroke-sky-600 text-sky-500 drop-shadow-sm"
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +156,7 @@ export const FollowPointer = ({
       </svg>
       <motion.div
         style={{
-          backgroundColor: colors[Math.floor(Math.random() * colors.length)],
+          backgroundColor: bgColor,
         }}
         initial={{
           scale: 0.5,
@@ -151,9 +170,10 @@ export const FollowPointer = ({
           scale: 0.5,
           opacity: 0,
         }}
-        className={
-          "min-w-max rounded-full bg-neutral-200 px-2 py-2 text-xs whitespace-nowrap text-white"
-        }
+        className={cn(
+          "min-w-max rounded-full px-3 py-1 text-xs whitespace-nowrap shadow-md",
+          badgeClassName || "text-white bg-neutral-200 px-2 py-2"
+        )}
       >
         {title || techFamousPeople[Math.floor(Math.random() * techFamousPeople.length)]}
       </motion.div>

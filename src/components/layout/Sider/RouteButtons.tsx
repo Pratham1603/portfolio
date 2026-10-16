@@ -26,12 +26,12 @@ const RouteButtons = ({ isMobile = false, onRouteClick }: RouteButtonsProps) => 
             className={`
               flex items-center cursor-pointer rounded-md text-sm
               ${isMobile
-              ? "flex-col p-2 min-w-[60px] justify-center"
+              ? "flex-col p-2 min-w-[60px] justify-center text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white"
               : "border px-3 py-2 gap-2 justify-start " +
-              "hover:text-black hover:bg-gray-200 "
+              "text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-neutral-800/80 transition-colors "
             }
               ${active
-              ? "bg-primary text-white border-primary"
+              ? "bg-primary text-white border-primary dark:bg-white dark:text-black dark:border-white font-medium shadow-2xs"
               : isMobile
                 ? ""
                 : "border-transparent"

@@ -1,5 +1,6 @@
 import React from 'react';
 import socialLinks from "@/data/socialLinks.tsx";
+import ThemeToggle from "@/components/layout/Sider/ThemeToggle";
 
 type SocialButtonsProps = {
   isMobile?: boolean;
@@ -13,16 +14,16 @@ const SocialButtons = (
 
   return (
     <div className={isMobile ? "flex space-x-4" : "space-y-3 py-5"}>
-      {!isMobile && <span className="text-sm mb-2 block">Connect</span>}
+      {!isMobile && <span className="text-sm mb-2 block text-neutral-500 dark:text-neutral-400">Connect</span>}
       <div className={isMobile ? "flex space-x-4" : "space-y-1"}>
         {socialLinks.map((socialLink, index) => {
           return (
             <a
               className={`
-                flex items-center cursor-pointer rounded-md text-sm
+                flex items-center cursor-pointer rounded-md text-sm text-neutral-700 dark:text-neutral-300
                 ${isMobile
-                ? "flex-col p-2 min-w-[60px] justify-center"
-                : "px-1 py-1.5 hover:text-black hover:underline transition-colors duration-200"
+                ? "flex-col p-2 min-w-[60px] justify-center hover:text-black dark:hover:text-white"
+                : "px-1 py-1.5 hover:text-black dark:hover:text-white hover:underline transition-colors duration-200"
               }
               `}
               href={socialLink.link}
@@ -48,6 +49,8 @@ const SocialButtons = (
             </a>
           );
         })}
+        {/* Dark mode button directly below Email */}
+        <ThemeToggle isMobile={isMobile} />
       </div>
     </div>
   );

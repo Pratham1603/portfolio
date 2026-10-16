@@ -1,10 +1,12 @@
-# Your Name, Portfolio
+# Pratham Harer, Portfolio
 
-> Personal portfolio, blog, and projects. Built with the nextjs-portfolio-starter template.
+> AI Engineer building intelligent backends, ML systems, and scalable APIs.
 
 ## Pages
 - / : Home
 - /about : About
 - /projects : Projects
+- /certifications : Certifications
 - /blogs : Blog
+- /services : Services
 - /contact : Contact

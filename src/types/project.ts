@@ -20,6 +20,7 @@ type Project = {
   secondaryLabel?: string;
   content: string;
   highlight?: string;
+  category?: string;
 }
 
 export type {

@@ -40,7 +40,7 @@ const BlogCard = ({post}: BlogCardProps) => {
           }
         >
           <Card
-            className='bg-neutral-200 border-none text-gray-800 hover:border-zinc-800 min-w-full h-full flex flex-col'
+            className='bg-neutral-200 dark:bg-[#121215] border border-neutral-300/70 dark:border-neutral-800 text-gray-800 dark:text-neutral-200 hover:border-zinc-800 dark:hover:border-neutral-700 min-w-full h-full flex flex-col'
           >
             <CardHeader
               className="flex flex-col p-2 gap-2"
@@ -61,25 +61,25 @@ const BlogCard = ({post}: BlogCardProps) => {
               className="flex flex-col gap-1 flex-1 pb-4"
             >
               <div className="flex-1">
-                <h2 className="text-primary font-semibold line-clamp-1">
+                <h2 className="text-primary dark:text-white font-semibold line-clamp-1">
                   {title}
                 </h2>
-                <h3 className="text-gray-800 text-sm line-clamp-1">
+                <h3 className="text-gray-800 dark:text-neutral-300 text-sm line-clamp-1">
                   {highlight}
                 </h3>
-                <h4 className="text-xs line-clamp-2">
+                <h4 className="text-xs line-clamp-2 text-neutral-600 dark:text-neutral-400">
                   {description}
                 </h4>
               </div>
 
               <div
-                className="flex gap-2 items-center justify-between text-xs text-zinc-700 mt-auto pt-2"
+                className="flex gap-2 items-center justify-between text-xs text-zinc-700 dark:text-neutral-400 mt-auto pt-2"
               >
                 <span>
                   {moment(date).format("MMM DD, YYYY")}
                 </span>
                 <span
-                  className="bg-zinc-800 text-white rounded-md px-2 py-1"
+                  className="bg-zinc-800 dark:bg-white text-white dark:text-black rounded-md px-2 py-1"
                 >
                   {type}
                 </span>

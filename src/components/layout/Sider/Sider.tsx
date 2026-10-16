@@ -1,6 +1,7 @@
 import SocialButtons from "@/components/layout/Sider/SocialButtons";
 import RouteButtons from "@/components/layout/Sider/RouteButtons";
 import AvatarBox from "@/components/layout/Sider/AvatarBox";
+import ThemeToggle from "@/components/layout/Sider/ThemeToggle";
 import { useState, useEffect } from "react";
 import {
   MenuIcon,
@@ -57,20 +58,23 @@ const Sider = ({isMobile = false}: SiderProps) => {
     return (
       <>
         {/* Mobile header with avatar and menu button */}
-        <header className="fixed top-0 left-0 right-0 flex justify-between items-center bg-secondary z-20 px-4 py-3 shadow-md">
+        <header className="fixed top-0 left-0 right-0 flex justify-between items-center bg-secondary dark:bg-[#0c0c0e] dark:border-b dark:border-neutral-800 z-20 px-4 py-3 shadow-md transition-colors duration-200">
           <div className="flex-shrink-0">
             <AvatarBox mobile={true} />
           </div>
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 rounded-md hover:bg-gray-200 transition-colors"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-          >
-            {menuOpen ? 
-              <XIcon className="h-6 w-6" /> : 
-              <MenuIcon className="h-6 w-6" />
-            }
-          </button>
+          <div className="flex items-center gap-1.5">
+            <ThemeToggle headerMode={true} />
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-neutral-800 text-neutral-800 dark:text-neutral-200 transition-colors"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+            >
+              {menuOpen ? 
+                <XIcon className="h-6 w-6" /> : 
+                <MenuIcon className="h-6 w-6" />
+              }
+            </button>
+          </div>
         </header>
 
         {/* Mobile menu overlay */}
@@ -82,12 +86,12 @@ const Sider = ({isMobile = false}: SiderProps) => {
             
         {/* Slide-in menu - animate transform */}
         <div 
-          className={`fixed top-0 left-0 h-screen w-64 px-4 py-12 space-y-4 overflow-y-auto bg-secondary z-40 shadow-xl transition-all duration-300 ease-in-out transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}
+          className={`fixed top-0 left-0 h-screen w-64 px-4 py-12 space-y-4 overflow-y-auto bg-secondary dark:bg-[#0c0c0e] dark:border-r dark:border-neutral-800 z-40 shadow-xl transition-all duration-300 ease-in-out transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}
         >
           {siderContent}
           <button 
             onClick={() => setMenuOpen(false)}
-            className="absolute top-4 right-4 p-1 rounded-full hover:bg-gray-200 transition-colors duration-200"
+            className="absolute top-4 right-4 p-1 rounded-full hover:bg-gray-200 dark:hover:bg-neutral-800 text-neutral-800 dark:text-neutral-200 transition-colors duration-200"
             aria-label="Close menu"
           >
             <XIcon className="h-5 w-5" />
@@ -99,7 +103,7 @@ const Sider = ({isMobile = false}: SiderProps) => {
 
   // Desktop view
   return (
-    <div className="fixed left-0 top-0 h-screen w-60 px-4 py-12 space-y-4 overflow-y-auto bg-secondary">
+    <div className="fixed left-0 top-0 h-screen w-60 px-4 py-12 space-y-4 overflow-y-auto bg-secondary dark:bg-[#0c0c0e] dark:border-r dark:border-neutral-800/80 transition-colors duration-200">
       {siderContent}
     </div>
   )

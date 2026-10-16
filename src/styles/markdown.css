@@ -72,3 +72,45 @@
     @apply text-blue-500 underline cursor-pointer hover:no-underline;
   }
 }
+
+.dark .prose {
+  @apply text-neutral-300;
+
+  & h1,
+  & h2,
+  & h3,
+  & h4 {
+    @apply text-white font-bold tracking-tight;
+  }
+  & h1 {
+    @apply border-b border-neutral-800;
+  }
+  & p {
+    @apply text-neutral-300;
+  }
+  & a {
+    @apply text-neutral-200 underline underline-offset-2 hover:text-white transition-colors;
+  }
+  & blockquote {
+    @apply border-l-4 border-neutral-600 bg-neutral-900 text-neutral-200;
+  }
+  & code {
+    @apply bg-neutral-800 text-neutral-200;
+  }
+  & table {
+    @apply border-neutral-800;
+  }
+  & th,
+  & td {
+    @apply border-neutral-800;
+  }
+  & th {
+    @apply bg-neutral-900 text-neutral-100;
+  }
+  & tr:nth-child(even) td {
+    @apply bg-neutral-900/50;
+  }
+  & img {
+    @apply border-neutral-800;
+  }
+}

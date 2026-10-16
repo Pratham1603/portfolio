@@ -12,10 +12,10 @@ const XConnectCard = () => {
         className="block"
         aria-label="Follow on X/Twitter"
       >
-        <div className="flex flex-row items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white shadow-sm hover:shadow-md active:shadow-inner transition-all duration-300 group w-full">
+        <div className="flex flex-row items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl border border-gray-200 dark:border-neutral-800 bg-gradient-to-br from-gray-50 to-white dark:from-[#141417] dark:to-[#0f0f12] shadow-sm hover:shadow-md active:shadow-inner transition-all duration-300 group w-full">
           <div className="flex-shrink-0">
             <svg
-              className="w-5 h-5 sm:w-6 sm:h-6 text-black"
+              className="w-5 h-5 sm:w-6 sm:h-6 text-black dark:text-white"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -25,13 +25,13 @@ const XConnectCard = () => {
             </svg>
           </div>
           <div className="flex-1">
-            <p className="text-xs sm:text-sm font-medium text-gray-800 leading-tight">
+            <p className="text-xs sm:text-sm font-medium text-gray-800 dark:text-neutral-200 leading-tight">
               <span className="inline">Connect with me on X</span>
               <span className="hidden">Follow me on X for updates</span>
             </p>
           </div>
           <div className="flex-shrink-0">
-            <span className="inline-flex items-center px-2.5 sm:px-3 py-1 bg-black text-white rounded-full text-xs font-medium group-hover:scale-105 group-active:scale-95 transition-transform">
+            <span className="inline-flex items-center px-2.5 sm:px-3 py-1 bg-black text-white dark:bg-white dark:text-black rounded-full text-xs font-medium group-hover:scale-105 group-active:scale-95 transition-transform">
               Follow
             </span>
           </div>

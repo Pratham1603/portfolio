@@ -1,24 +1,26 @@
 import HomePage from "@/components/HomePage";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { getPostData, getSortedPostsData } from '@/lib/blogs';
-import { Blog } from "@/types/blog.ts";
+import { fetchMediumPosts, MediumPost } from "@/lib/medium";
 import SEO from "@/components/SEO";
 import { siteConfig } from "@/config/site.config";
+import { GetServerSideProps } from "next";
 
-export async function getStaticProps() {
-  const [latestPost] = getSortedPostsData();
-  const featuredPost = latestPost ? getPostData(latestPost.slug) as Blog : null;
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+
+  const mediumPosts = await fetchMediumPosts("prathamharer1603");
+  const latestPost = mediumPosts.length > 0 ? mediumPosts[0] : null;
 
   return {
     props: {
-      featuredContent: featuredPost || null
-    }
+      featuredContent: latestPost,
+    },
   };
-}
+};
 
 type HomeProps = {
-  featuredContent: Blog | null;
-}
+  featuredContent: MediumPost | any;
+};
 
 export default function Home({ featuredContent }: HomeProps) {
   return (
@@ -29,11 +31,9 @@ export default function Home({ featuredContent }: HomeProps) {
         keywords={siteConfig.seo.keywords}
         canonicalPath="/"
       />
-      <BackgroundBeamsWithCollision
-        className="min-h-full"
-      >
+      <BackgroundBeamsWithCollision className="min-h-full">
         <HomePage featuredContent={featuredContent} />
       </BackgroundBeamsWithCollision>
     </>
-  )
+  );
 }

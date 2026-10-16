@@ -1,38 +1,49 @@
-import {RouteLink} from "@/types";
-import {IoHomeOutline, IoMailOutline, IoNavigate, IoPencilOutline} from "react-icons/io5";
-import {MdOutlineMapsHomeWork} from "react-icons/md";
-import {FaRegUserCircle} from "react-icons/fa";
+import { RouteLink } from "@/types";
+import {
+  IoHomeOutline,
+  IoMailOutline,
+  IoNavigate,
+  IoPencilOutline,
+  IoRibbonOutline,
+  IoBriefcaseOutline,
+} from "react-icons/io5";
+import { FaRegUserCircle } from "react-icons/fa";
 
 const links: RouteLink[] = [
   {
     path: "/",
     name: "Home",
-    icon: <IoHomeOutline/>
-  },
-  {
-    path: "/projects",
-    name: "Projects",
-    icon: <IoNavigate/>
-  },
-  {
-    path: "/experience",
-    name: "Experience",
-    icon: <MdOutlineMapsHomeWork/>
-  },
-  {
-    path: "/blogs",
-    name: "Blogs",
-    icon: <IoPencilOutline/>
+    icon: <IoHomeOutline />,
   },
   {
     path: "/about",
     name: "About",
-    icon: <FaRegUserCircle/>
+    icon: <FaRegUserCircle />,
+  },
+  {
+    path: "/projects",
+    name: "Projects",
+    icon: <IoNavigate />,
+  },
+  {
+    path: "/certifications",
+    name: "Certifications",
+    icon: <IoRibbonOutline />,
+  },
+  {
+    path: "/blogs",
+    name: "Blogs",
+    icon: <IoPencilOutline />,
+  },
+  {
+    path: "/services",
+    name: "Services",
+    icon: <IoBriefcaseOutline />,
   },
   {
     path: "/contact",
     name: "Contact",
-    icon: <IoMailOutline/>
+    icon: <IoMailOutline />,
   },
 ];
 

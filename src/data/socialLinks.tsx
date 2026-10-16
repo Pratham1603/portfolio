@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaMedium, FaRss } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaMedium } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { siteConfig } from "@/config/site.config";
 
@@ -24,14 +24,14 @@ const socialLinks = [
     link: siteConfig.social.medium,
   },
   {
+    icon: <FaEnvelope />,
+    title: "Email",
+    link: siteConfig.email ? `mailto:${siteConfig.email}` : "",
+  },
+  {
     icon: <FaInstagram />,
     title: "Instagram",
     link: siteConfig.social.instagram,
-  },
-  {
-    icon: <FaRss />,
-    title: "RSS",
-    link: "/rss.xml",
   },
 ].filter((s) => s.link);
 

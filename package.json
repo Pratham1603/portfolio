@@ -1,8 +1,8 @@
 {
-  "name": "nextjs-portfolio-starter",
+  "name": "pratham-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Open-source Next.js portfolio starter. Edit one config file and deploy.",
+  "description": "Pratham Harer — AI Engineer Portfolio",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",

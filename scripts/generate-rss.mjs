@@ -2,9 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const SITE_URL = process.env.SITE_URL || 'https://example.com';
-const FEED_TITLE = 'Your Name';
-const FEED_DESC = 'Personal portfolio, blog, and projects.';
+const SITE_URL = process.env.SITE_URL || 'https://prathamharer.dev';
+const FEED_TITLE = 'Pratham Harer';
+const FEED_DESC = 'AI Engineer building intelligent backends, ML systems, and scalable APIs.';
 const MAX_ITEMS = 30;
 
 const blogsDir = path.join(process.cwd(), 'content', 'blogs');

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 type ContainerProps = {
   children: React.ReactNode;
@@ -11,6 +12,17 @@ const Container = (
     isMobile
   }: ContainerProps
 ) => {
+  const router = useRouter();
+  const isContact = router.pathname === "/contact";
+
+  if (isContact) {
+    return (
+      <div className={`grow w-full flex flex-col justify-start ${isMobile ? 'pt-6' : ''}`}>
+        {children}
+      </div>
+    );
+  }
+
   return (
     <div
       className={`

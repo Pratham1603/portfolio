@@ -24,7 +24,7 @@ function Layout({children}: LayoutProps) {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-r from-white to-gray-200 text-primary">
+    <div className="flex flex-col min-h-screen bg-gradient-to-r from-white to-gray-200 dark:from-[#09090b] dark:to-[#000000] text-primary dark:text-[#f4f4f5] transition-colors duration-300">
       <Sider isMobile={isMobile}/>
       <div className={`flex max-w-screen flex-1 flex-col justify-between ${isMobile ? 'pt-16' : 'ml-60'}`}>
         <Container isMobile={isMobile}>

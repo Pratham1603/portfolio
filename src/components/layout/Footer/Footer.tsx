@@ -13,7 +13,7 @@ const Footer = (
 
   return (
     <footer className={`flex self-end min-w-full p-3 sm:p-5 flex-col border-t-[0.5px] 
-    text-gray-700 border-gray-700
+    text-gray-700 dark:text-neutral-400 border-neutral-300 dark:border-neutral-800
     space-x-3 gap-2 text-xs sm:text-sm max-w-xl md:max-w-4xl mx-auto
     ${isMobile ? "mb-20" : ""}
     `}>
@@ -21,7 +21,7 @@ const Footer = (
         <div className="flex items-center">
           {/*<span className="text-blue-400 mr-2">Currently</span>*/}
           <Link
-            className="text-gray-700 hover:text-gray-800 hover:underline transition-colors duration-300 ease-in-out"
+            className="text-gray-700 dark:text-neutral-300 hover:text-gray-800 dark:hover:text-white hover:underline transition-colors duration-300 ease-in-out"
             href={"/contact"}
           >
             Reach out →
@@ -42,17 +42,6 @@ const Footer = (
         </div>
       </div>
 
-      {/* Optional credit for the template. Feel free to remove it. */}
-      <div className="text-center text-[11px] text-gray-600">
-        <a
-          className="hover:text-gray-800 hover:underline transition-colors duration-300 ease-in-out"
-          href="https://github.com/onlyoneaman/nextjs-portfolio-starter"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Built with a template by @onlyoneaman ↗
-        </a>
-      </div>
     </footer>
   );
 };

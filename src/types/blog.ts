@@ -26,6 +26,7 @@ type Blog = {
   slug: string;
   hidden?: boolean;
   tags?: string[];
+  summary?: string;
 }
 
 export type {

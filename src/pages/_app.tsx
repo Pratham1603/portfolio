@@ -12,6 +12,7 @@ import { Inter } from "next/font/google";
 import { useEffect } from "react";
 import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
+import { ThemeProvider } from "next-themes";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { siteConfig } from "@/config/site.config";
 
@@ -111,17 +112,19 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       <Script id={"json-ld"} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <GoogleAnalytics />
       <PostHogProvider client={posthog}>
-        <TooltipProvider delayDuration={0}>
-          <div className={inter.className}>
-            {useLayout ? (
-              <Layout>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <TooltipProvider delayDuration={0}>
+            <div className={inter.className}>
+              {useLayout ? (
+                <Layout>
+                  <Component {...pageProps} />
+                </Layout>
+              ) : (
                 <Component {...pageProps} />
-              </Layout>
-            ) : (
-              <Component {...pageProps} />
-            )}
-          </div>
-        </TooltipProvider>
+              )}
+            </div>
+          </TooltipProvider>
+        </ThemeProvider>
       </PostHogProvider>
     </>
   );

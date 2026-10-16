@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your Name</title>
-    <link>https://example.com</link>
-    <description>Personal portfolio, blog, and projects.</description>
+    <title>Pratham Harer</title>
+    <link>https://prathamharer.dev</link>
+    <description>AI Engineer building intelligent backends, ML systems, and scalable APIs.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 GMT</lastBuildDate>
-    <atom:link href="https://example.com/rss.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Writing With Markdown</title>
-      <link>https://example.com/blogs/writing-with-markdown</link>
-      <guid isPermaLink="true">https://example.com/blogs/writing-with-markdown</guid>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
-      <description>A quick tour of the frontmatter fields and formatting this template supports.</description>
-      <enclosure url="https://example.com/content/blogs/sample-cover.png" type="image/webp" />
-    </item>
-    <item>
-      <title>Hello World</title>
-      <link>https://example.com/blogs/hello-world</link>
-      <guid isPermaLink="true">https://example.com/blogs/hello-world</guid>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
-      <description>The first post on your new portfolio. Edit or delete it and start writing.</description>
-      <enclosure url="https://example.com/content/blogs/sample-cover.png" type="image/webp" />
-    </item>
+    <lastBuildDate>Thu, 01 Jan 1970 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://prathamharer.dev/rss.xml" rel="self" type="application/rss+xml" />
+
   </channel>
 </rss>

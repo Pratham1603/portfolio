@@ -1,7 +1,7 @@
 {
-  "name": "Your Name",
-  "short_name": "Portfolio",
-  "description": "Personal portfolio, blog, and projects.",
+  "name": "Pratham Harer",
+  "short_name": "Pratham",
+  "description": "AI Engineer building intelligent backends, ML systems, and scalable APIs.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

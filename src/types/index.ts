@@ -6,10 +6,13 @@ type Experience = {
   description: string;
   role: string;
   companyName: string;
-  website: string;
+  website?: string;
+  proofLink?: string;
+  image?: string;
   points: string[];
   techStack: string[];
   fullLogo?: string;
+  logo?: string;
 };
 
 type RouteLink = {

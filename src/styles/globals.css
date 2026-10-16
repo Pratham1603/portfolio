@@ -37,6 +37,37 @@
 
         --radius: 0.5rem;
     }
+
+    .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+    }
+
   .maplibregl-popup-content {
     @apply bg-transparent! shadow-none! p-0! rounded-none!;
     }
@@ -53,6 +84,15 @@
     body {
         @apply bg-background text-foreground;
     }
+
+    .dark body {
+        background-color: #09090b;
+        color: #f4f4f5;
+    }
+}
+
+.dark {
+    color-scheme: dark;
 }
 
 @theme inline {
@@ -116,5 +156,61 @@
 
   .slider:focus::-webkit-slider-thumb {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+
+  /* GitHub Contribution Graph - Fixed Layout without Scrollbars & Full-Width Equal Alignment */
+  .ghContributionGraph {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ghContributionGraph,
+  .ghCalendarCard,
+  .ghCalendarCanvas {
+    overflow-x: hidden !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  .ghContributionGraph::-webkit-scrollbar,
+  .ghCalendarCard::-webkit-scrollbar,
+  .ghCalendarCanvas::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .ghCalendarHeader {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  .ghCalendarHeader span,
+  .ghCalendarHeader div {
+    float: none !important;
+  }
+
+  .ghCalendarCard {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ghCalendarCanvas {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .ghCalendarTable {
+    margin: 0 auto !important;
   }
 }
