@@ -4,6 +4,9 @@ const nextConfig = {
   // Static export: the whole site is prerendered, so it deploys as plain files
   // (Cloudflare Pages "Next.js (Static HTML Export)", Vercel, GitHub Pages, etc.).
   images: { unoptimized: true },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;

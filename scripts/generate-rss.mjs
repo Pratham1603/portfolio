@@ -28,17 +28,19 @@ const absUrl = (p) => {
   return `${SITE_URL}${p.startsWith('/') ? '' : '/'}${p}`;
 };
 
-const posts = fs
-  .readdirSync(blogsDir)
-  .filter((f) => f.endsWith('.md'))
-  .map((f) => {
-    const slug = f.replace(/\.md$/, '');
-    const { data } = matter(fs.readFileSync(path.join(blogsDir, f), 'utf8'));
-    return { slug, ...data };
-  })
-  .filter((p) => !p.private && !p.hidden && p.slug !== 'template' && p.title && p.date)
-  .sort((a, b) => (a.date < b.date ? 1 : -1))
-  .slice(0, MAX_ITEMS);
+const posts = fs.existsSync(blogsDir)
+  ? fs
+      .readdirSync(blogsDir)
+      .filter((f) => f.endsWith('.md'))
+      .map((f) => {
+        const slug = f.replace(/\.md$/, '');
+        const { data } = matter(fs.readFileSync(path.join(blogsDir, f), 'utf8'));
+        return { slug, ...data };
+      })
+      .filter((p) => !p.private && !p.hidden && p.slug !== 'template' && p.title && p.date)
+      .sort((a, b) => (a.date < b.date ? 1 : -1))
+      .slice(0, MAX_ITEMS)
+  : [];
 
 const items = posts
   .map((p) => {
