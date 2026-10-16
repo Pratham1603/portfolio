@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://prathamharer.dev</loc><lastmod>2026-10-16T19:39:52.076Z</lastmod><changefreq>daily</changefreq><priority>1</priority></url>
-<url><loc>https://prathamharer.dev/about</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://prathamharer.dev/blogs</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://prathamharer.dev/certifications</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://prathamharer.dev/contact</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://prathamharer.dev/experience</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://prathamharer.dev/projects</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-<url><loc>https://prathamharer.dev/services</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://prathamharer.dev/projects/haulage-backend</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://prathamharer.dev/projects/sezzle-ai</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://prathamharer.dev/projects/fetchbean</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://prathamharer.dev/projects/indian-startup-funding-tracker</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://prathamharer.dev/projects/kay-ai</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://prathamharer.dev/projects/finsight-ai</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://prathamharer.dev/projects/krishimarg</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://prathamharer.dev/projects/ltce-portal</loc><lastmod>2026-10-16T19:39:52.077Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai</loc><lastmod>2026-10-16T19:47:04.301Z</lastmod><changefreq>daily</changefreq><priority>1</priority></url>
+<url><loc>https://prathamharer.is-an.ai/about</loc><lastmod>2026-10-16T19:47:04.302Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai/blogs</loc><lastmod>2026-10-16T19:47:04.302Z</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://prathamharer.is-an.ai/certifications</loc><lastmod>2026-10-16T19:47:04.302Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai/contact</loc><lastmod>2026-10-16T19:47:04.302Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai/experience</loc><lastmod>2026-10-16T19:47:04.302Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai/projects</loc><lastmod>2026-10-16T19:47:04.302Z</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://prathamharer.is-an.ai/services</loc><lastmod>2026-10-16T19:47:04.302Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai/projects/haulage-backend</loc><lastmod>2026-10-16T19:47:04.302Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai/projects/sezzle-ai</loc><lastmod>2026-10-16T19:47:04.302Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai/projects/fetchbean</loc><lastmod>2026-10-16T19:47:04.303Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai/projects/indian-startup-funding-tracker</loc><lastmod>2026-10-16T19:47:04.303Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai/projects/kay-ai</loc><lastmod>2026-10-16T19:47:04.303Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai/projects/finsight-ai</loc><lastmod>2026-10-16T19:47:04.303Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai/projects/krishimarg</loc><lastmod>2026-10-16T19:47:04.303Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://prathamharer.is-an.ai/projects/ltce-portal</loc><lastmod>2026-10-16T19:47:04.303Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

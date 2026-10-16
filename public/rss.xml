@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pratham Harer</title>
-    <link>https://prathamharer.dev</link>
+    <link>https://prathamharer.is-an.ai</link>
     <description>AI Engineer building intelligent backends, ML systems, and scalable APIs.</description>
     <language>en</language>
     <lastBuildDate>Thu, 01 Jan 1970 00:00:00 GMT</lastBuildDate>
-    <atom:link href="https://prathamharer.dev/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://prathamharer.is-an.ai/rss.xml" rel="self" type="application/rss+xml" />
 
   </channel>
 </rss>

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://prathamharer.dev
+Host: https://prathamharer.is-an.ai
 
 # Sitemaps
-Sitemap: https://prathamharer.dev/sitemap.xml
+Sitemap: https://prathamharer.is-an.ai/sitemap.xml
