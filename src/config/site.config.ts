@@ -10,7 +10,7 @@ export const siteConfig = {
 
   email: "prathamharer1603@gmail.com",
   phone: "", // used by the contact call button; blank hides it
-  siteUrl: "https://prathamharer.is-an.ai",
+  siteUrl: "https://pratham-harer.is-an.ai",
 
   avatar: "/images/avatar.png",
   resume: "/resume.pdf",

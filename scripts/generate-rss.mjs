@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const SITE_URL = process.env.SITE_URL || 'https://prathamharer.is-an.ai';
+const SITE_URL = process.env.SITE_URL || 'https://pratham-harer.is-an.ai';
 const FEED_TITLE = 'Pratham Harer';
 const FEED_DESC = 'AI Engineer building intelligent backends, ML systems, and scalable APIs.';
 const MAX_ITEMS = 30;

@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
-const siteUrl = process.env.SITE_URL || 'https://prathamharer.is-an.ai';
+const siteUrl = process.env.SITE_URL || 'https://pratham-harer.is-an.ai';
 
 const config = {
     siteUrl,
