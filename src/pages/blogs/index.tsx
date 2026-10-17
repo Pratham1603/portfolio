@@ -2,21 +2,24 @@ import React from "react";
 import BlogPostList from "@/components/Blogs/BlogPostList";
 import { fetchMediumPosts, MediumPost } from "@/lib/medium";
 import SEO from "@/components/SEO.tsx";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 
-// This runs on EVERY SINGLE page load and reload - zero static cache!
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  // Prevent any browser or intermediary CDN caching so every reload is live
-  res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
-
-  const allMediumPosts = await fetchMediumPosts("prathamharer1603");
-  const top10Posts = allMediumPosts.slice(0, 10);
-
-  return {
-    props: {
-      posts: top10Posts,
-    },
-  };
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    const allMediumPosts = await fetchMediumPosts("prathamharer1603");
+    const top10Posts = allMediumPosts.slice(0, 10);
+    return {
+      props: {
+        posts: top10Posts,
+      },
+    };
+  } catch {
+    return {
+      props: {
+        posts: [],
+      },
+    };
+  }
 };
 
 type BlogsListProps = {

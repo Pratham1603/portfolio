@@ -3,19 +3,25 @@ import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-w
 import { fetchMediumPosts, MediumPost } from "@/lib/medium";
 import SEO from "@/components/SEO";
 import { siteConfig } from "@/config/site.config";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    const mediumPosts = await fetchMediumPosts("prathamharer1603");
+    const latestPost = mediumPosts.length > 0 ? mediumPosts[0] : null;
 
-  const mediumPosts = await fetchMediumPosts("prathamharer1603");
-  const latestPost = mediumPosts.length > 0 ? mediumPosts[0] : null;
-
-  return {
-    props: {
-      featuredContent: latestPost,
-    },
-  };
+    return {
+      props: {
+        featuredContent: latestPost,
+      },
+    };
+  } catch {
+    return {
+      props: {
+        featuredContent: null,
+      },
+    };
+  }
 };
 
 type HomeProps = {

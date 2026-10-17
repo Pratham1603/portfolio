@@ -5,7 +5,7 @@ import BlogPost from "@/components/Blogs/BlogPost";
 import SEO from "@/components/SEO.tsx";
 import { siteConfig } from "@/config/site.config";
 import { fetchMediumPosts, findPostBySlug, MediumPost } from "@/lib/medium";
-import { GetServerSideProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 
 type BlogsPageProps = {
   post?: MediumPost | any;
@@ -100,15 +100,30 @@ const BlogPage = ({ post }: BlogsPageProps) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ params, res }) => {
-  res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+export const getStaticPaths: GetStaticPaths = async () => {
+  try {
+    const mediumPosts = await fetchMediumPosts("prathamharer1603");
+    const paths = mediumPosts.map((p) => ({
+      params: { slug: p.slug },
+    }));
+    return {
+      paths,
+      fallback: false,
+    };
+  } catch {
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
+};
 
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string;
   if (!slug) {
     return { notFound: true };
   }
 
-  // Fetch fresh from Medium on EVERY reload / request
   const mediumPosts = await fetchMediumPosts("prathamharer1603");
   let post: any = findPostBySlug(mediumPosts, slug);
 
