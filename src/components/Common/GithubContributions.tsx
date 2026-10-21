@@ -149,9 +149,8 @@ const GithubContributions = ({
             container.className = "ghCalendarHeader";
 
             const totalSpan = document.createElement("span");
-            const minCount = siteConfig.githubContributionsCount ?? 611;
-            const count = Math.max(totalContributions || 0, minCount);
-            totalSpan.textContent = `${count} contributions`;
+            const count = totalContributions ?? siteConfig.githubContributionsCount ?? 0;
+            totalSpan.textContent = `${count} contributions in the last year`;
 
             const profileDiv = document.createElement("div");
             const link = document.createElement("a");

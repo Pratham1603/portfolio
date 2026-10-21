@@ -17,7 +17,7 @@ export const siteConfig = {
   calLink: "", // your Cal.com handle (e.g. "yourname/30min"); blank hides the booking embed
 
   githubUsername: "Pratham1603", // used for the GitHub contributions graph
-  githubContributionsCount: 611, // total contributions till date (including private contributions)
+  githubContributionsCount: 0, // fallback count if GitHub API is unreachable (live count is fetched automatically)
 
   social: {
     twitter: "https://x.com/HarerPrath74363",
