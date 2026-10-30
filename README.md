@@ -6,6 +6,16 @@
 
 ---
 
+<p align="center">
+  <img 
+    src="https://github.com/user-attachments/assets/2c0066a3-4db7-435c-a319-43c1e39910bf"
+    alt="Project Preview"
+    width="100%"
+  />
+</p>
+
+---
+
 ## 🛠️ Tech Stack
 - **Framework**: Next.js 14, React 18, TypeScript
 - **Styling**: Tailwind CSS, Framer Motion, Aceternity UI
