@@ -19,7 +19,7 @@ const AvatarBox = ({ mobile = false }: AvatarBoxProps) => {
       className={`flex items-center justify-start space-x-3 ${!mobile ? 'sm:mb-8' : ''} px-2 cursor-pointer`}
       onClick={() => returnToHome()}
     >
-      <Avatar>
+      <Avatar className="flex-shrink-0">
         <AvatarImage
           className="h-10 w-10 rounded-full object-cover"
           alt={siteConfig.name}
@@ -30,12 +30,12 @@ const AvatarBox = ({ mobile = false }: AvatarBoxProps) => {
         </AvatarFallback>
       </Avatar>
       <div
-        className="text-sm flex flex-col"
+        className="text-sm flex flex-col min-w-0"
       >
-        <span className="text-black dark:text-white font-medium md:text-lg">
+        <span className="text-black dark:text-white font-medium md:text-lg whitespace-nowrap">
           {siteConfig.name}
         </span>
-        <span className="text-neutral-600 dark:text-neutral-400">
+        <span className="text-neutral-600 dark:text-neutral-400 whitespace-nowrap">
           <Typewriter
             words={[
               "AI Engineer",
