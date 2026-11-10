@@ -91,28 +91,15 @@ const ServiceCard = ({
           transition={{ duration: 0.2 }}
           className="group flex flex-col justify-between rounded-2xl bg-neutral-200 dark:bg-[#121215] border border-neutral-300/70 dark:border-neutral-800 p-2.5 sm:p-3 hover:shadow-lg hover:border-neutral-400 dark:hover:border-neutral-700 transition-all cursor-pointer h-full"
         >
-          {/* Framed Visual Header (Matching Blog Card Image Frame) */}
+          {/* Visual Header */}
           {service.image ? (
-            <div className="w-full aspect-[16/8] overflow-hidden rounded-xl bg-white dark:bg-[#18181c] p-3 sm:p-4 flex flex-col justify-between relative border border-neutral-300/80 dark:border-neutral-800 shadow-inner">
-              {/* Image in frame */}
-              <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Top row: Tag & Number */}
-              <div className="flex items-center justify-between relative z-10">
-                <span className="text-[11px] font-semibold tracking-wider uppercase text-neutral-900 dark:text-white bg-white/90 dark:bg-neutral-800/90 px-2.5 py-0.5 rounded-full backdrop-blur-md border border-neutral-300 dark:border-neutral-700 shadow-sm">
-                  {service.tag}
-                </span>
-                <span className="text-xs font-mono font-bold text-neutral-700 dark:text-neutral-300 bg-white/90 dark:bg-neutral-800/90 px-2 py-0.5 rounded-full backdrop-blur-md border border-neutral-300 dark:border-neutral-700 shadow-sm">
-                  {numberStr}
-                </span>
-              </div>
+            <div className="w-full aspect-[659/324] overflow-hidden rounded-xl relative flex items-center justify-center">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
             </div>
           ) : (
             <div className="w-full aspect-[16/8] overflow-hidden rounded-xl bg-gradient-to-br from-neutral-800 via-neutral-900 to-black p-4 flex flex-col justify-between relative shadow-inner">

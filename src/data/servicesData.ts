@@ -22,7 +22,7 @@ const servicesData: Service[] = [
       "A clear roadmap you can act on",
     ],
     icon: "Compass",
-    image: "/images/services/ai-consulting.jpg",
+    image: "/images/services/ai-consulting.png",
   },
   {
     id: "ai-agents",
@@ -37,7 +37,7 @@ const servicesData: Service[] = [
       "Fixed scope and fixed price",
     ],
     icon: "Bot",
-    image: "/images/services/ai-agents.jpg",
+    image: "/images/services/ai-agents.png",
   },
   {
     id: "rag-systems",
@@ -52,7 +52,7 @@ const servicesData: Service[] = [
       "Permission-aware access to sensitive files",
     ],
     icon: "Database",
-    image: "/images/services/rag-systems.jpg",
+    image: "/images/services/rag-systems.png",
   },
   {
     id: "evaluation-security",
@@ -67,7 +67,7 @@ const servicesData: Service[] = [
       "Guardrails and permission controls",
     ],
     icon: "ShieldCheck",
-    image: "/images/services/evaluation-security.jpg",
+    image: "/images/services/evaluation-security.png",
   },
   {
     id: "llmops-deployment",
@@ -82,7 +82,7 @@ const servicesData: Service[] = [
       "Documentation and team handover",
     ],
     icon: "Cloud",
-    image: "/images/services/llmops-deployment.jpg",
+    image: "/images/services/llmops-deployment.png",
   },
   {
     id: "observability-monitoring",
@@ -97,7 +97,7 @@ const servicesData: Service[] = [
       "Small new features every month",
     ],
     icon: "Activity",
-    image: "/images/services/observability-monitoring.jpg",
+    image: "/images/services/observability-monitoring.png",
   },
 ];
 
